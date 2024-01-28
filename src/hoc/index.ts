@@ -1,0 +1,1 @@
+export { default as WithHomeCardLayout } from './withCardLayout/withHomeCardLayout.hoc'

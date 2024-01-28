@@ -1,0 +1,46 @@
+.main-layout {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+
+    &>nav {
+        height: 100px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        position: sticky;
+        top: 0;
+
+        .nav-links {
+            display: inline-flex;
+            gap: 3vw;
+
+            &>a {
+                font-size: 0.9rem;
+            }
+
+
+        }
+    }
+
+    @include themify($themes) {
+        &>nav {
+            .nav-links {
+                &>a {
+                    color: themed('subtle-text-color');
+
+
+                    &:is(&.active, &:hover) {
+                        color: themed('primary-text-color');
+                    }
+                }
+            }
+        }
+    }
+
+    &-inner {
+        flex: 1;
+        padding-top: 40px;
+    }
+
+}

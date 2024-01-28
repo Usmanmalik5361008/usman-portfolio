@@ -1,0 +1,23 @@
+.transition-page {
+    height: 100vh;
+    display: flex;
+    position: fixed;
+    inset: 0;
+    z-index: 2;
+    align-items: center;
+    padding-left: 8vw;
+
+    @include themify($themes) {
+        background-color: themed('primary-color');
+    }
+}
+
+
+.home-card-layout {
+    max-width: 500px;
+    background: rgb(30,30,30);
+    height: 300px;
+    background: linear-gradient(90deg, rgba(29,29,29,1) 0%, rgba(23,23,23,1) 32%);
+    border-radius: 18px;
+    border:1px solid #1e1e1e ;
+}
