@@ -53,7 +53,7 @@ const DefaultLayout: React.FC<{ children: React.ReactNode }> = ({
 
       <main className={`main-layout ${poppins.className}`}>
         <Navbar />
-        <AnimatePresence mode="popLayout">
+        <AnimatePresence mode="wait">
           <motion.div
             key={pathname}
             variants={pageInnerVariants}

@@ -5,12 +5,16 @@ export const pageInnerVariants: Variants = {
         opacity: 0
     },
     visible: {
-        opacity: 1
+        opacity: 1,
+        scale: 1,
+        transition: {
+            duration: 1,
+            delay: 5
+        },
+
     },
     exit: {
-        transition: {
-            duration: 1
-        },
-        opacity: 0
+        opacity: 0,
+        scale: 0.9
     }
 }
