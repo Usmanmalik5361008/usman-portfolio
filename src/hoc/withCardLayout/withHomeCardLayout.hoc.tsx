@@ -1,6 +1,6 @@
-const WithHomeCardLayout: React.FC<{ children: React.ReactNode }> = ({
-  children,
-}) => {
-  return <div className="home-card-layout">{children}</div>;
-};
-export default WithHomeCardLayout;
+const withHomeCardLayout =
+  (Component: React.FC): React.FC =>
+  () =>
+    <div className="home-card-layout">{<Component />}</div>;
+
+export default withHomeCardLayout;

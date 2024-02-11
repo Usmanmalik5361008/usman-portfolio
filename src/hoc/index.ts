@@ -1,1 +1,1 @@
-export { default as WithHomeCardLayout } from './withCardLayout/withHomeCardLayout.hoc'
+export { default as withHomeCardLayout } from './withCardLayout/withHomeCardLayout.hoc'
