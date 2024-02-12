@@ -26,13 +26,10 @@ const DefaultLayout: React.FC<{ children: React.ReactNode }> = ({
   const [animationState, animationToggler] = useCycle(false, true);
   const controls = useAnimationControls();
 
-  const isFirstMount = useRef(true);
+  // const isFirstMount = useRef(true);
 
   useEffect(() => {
-    if (isFirstMount.current) {
-      isFirstMount.current = false;
-      return;
-    }
+
     controls.start({ opacity: 0, transition: { duration: 0 } });
     animationToggler();
 
