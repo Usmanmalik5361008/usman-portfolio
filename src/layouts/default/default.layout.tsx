@@ -40,7 +40,7 @@ const DefaultLayout: React.FC<{ children: React.ReactNode }> = ({
       animationToggler();
       controls.start({ opacity: 1 });
     }, 3000);
-  }, [pathname]);
+  }, [pathname, animationToggler, controls]);
 
   const pageTitle = useMemo(() => {
     const pageTitle = kebabCaseToNormalText(pathname.substring(1));
