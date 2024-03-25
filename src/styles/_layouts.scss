@@ -17,6 +17,21 @@
 
             &>a {
                 font-size: 0.9rem;
+                position: relative;
+
+                &:after {
+                    position: absolute;
+                    left: -10px;
+                    top: 50%;
+                    transform: translateY(-50%);
+                    width: 6px;
+                    height: 6px;
+                    border-radius: 50%;
+                    background-color: $primary-color;
+                    content: " ";
+                    opacity: 0;
+                    transition: 0.3s opacity;
+                }
             }
 
 
@@ -31,7 +46,11 @@
 
 
                     &:is(&.active, &:hover) {
-                        color: themed('primary-text-color');
+                        color: white;
+
+                        &:after {
+                            opacity: 1;
+                        }
                     }
                 }
             }
@@ -41,6 +60,7 @@
     &-inner {
         flex: 1;
         padding-top: 40px;
+        padding-bottom: 20px;
     }
 
 }

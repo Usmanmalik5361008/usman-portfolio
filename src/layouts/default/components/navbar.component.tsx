@@ -4,7 +4,7 @@ import Link from "next/link";
 const Navbar: React.FC = () => {
     return (
         <nav className="container">
-            <Typography.Title>GridX</Typography.Title>
+            <Typography.Title>X</Typography.Title>
             <div className="nav-links">
                 <Link href={"/"} className="active">
                     Home

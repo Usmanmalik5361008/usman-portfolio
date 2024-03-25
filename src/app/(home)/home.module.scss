@@ -1,34 +1,64 @@
 .home-page-wrapper {
-    display: flex;
-
-    .home-rows-1 {
-        display: grid;
-        grid-template-columns: repeat(2, 1fr);
-        grid-template-rows: repeat(2, 1fr);
-        width: 100%;
-
-        .intro-card {
-            grid-area: intro;
-            display: flex;
-            gap: 20px;
-            align-items: center;
+    .intro-card {
+        display: flex;
+        gap: 20px;
+        align-items: center;
 
 
-            &>div {
-                &:first-child {
-                    flex: 0.4;
-                    height: 250px;
-                    position: relative;
+        &>div {
+            &:first-child {
+                flex: 0.4;
+                min-height: 230px;
+                position: relative;
 
-                }
+            }
 
-                &:last-child {
-                    flex: 0.6;
-                    display: flex;
-                    flex-direction: column;
-                    gap: 5px;
-                }
+            &:last-child {
+                flex: 0.6;
+                display: flex;
+                flex-direction: column;
+                gap: 5px;
             }
         }
     }
+
+    .project-card,
+    .profile-card {
+        min-height: 140px;
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-end;
+    }
+
+    .numbers-card {
+        min-height: 140px;
+        display: flex;
+        gap: 10px;
+        align-items: center;
+        justify-content: space-around;
+
+
+        .number {
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+            align-items: center;
+            padding: 30px 20px;
+            text-transform: uppercase;
+            border-radius: 20px;
+            background: #1E1E1E;
+            flex: 1;
+
+            .num-title {
+                max-width: 140px;
+            }
+        }
+    }
+
+    .l-w-t-card {
+        display: flex;
+        align-items: flex-end;
+    }
+
 }

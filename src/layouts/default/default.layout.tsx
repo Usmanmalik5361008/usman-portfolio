@@ -1,48 +1,20 @@
 "use client";
 
 import { ConfigProvider } from "antd";
-import {
-  AnimatePresence,
-  motion,
-  useAnimationControls,
-  useCycle,
-} from "framer-motion";
-import { usePathname } from "next/navigation";
+import { AnimatePresence, motion } from "framer-motion";
 
 import { PageTransition } from "@/components";
 import { antdThemeConfig } from "@/config/antdTheme.config";
 import { poppins } from "@/config/fonts";
-import "@/styles/main.scss";
 import { Navbar } from "./components";
-import { useEffect, useMemo, useRef, useState } from "react";
-import { kebabCaseToNormalText } from "@/utils";
 import { pageInnerVariants } from "./default.variants";
+import useDefault from "./useDefault.hook";
+import "@/styles/main.scss";
 
 const DefaultLayout: React.FC<{ children: React.ReactNode }> = ({
   children,
 }) => {
-  const pathname = usePathname();
-
-  const [animationState, animationToggler] = useCycle(false, true);
-  const controls = useAnimationControls();
-
-  // const isFirstMount = useRef(true);
-
-  useEffect(() => {
-
-    controls.start({ opacity: 0, transition: { duration: 0 } });
-    animationToggler();
-
-    setTimeout(() => {
-      animationToggler();
-      controls.start({ opacity: 1 });
-    }, 3000);
-  }, [pathname, animationToggler, controls]);
-
-  const pageTitle = useMemo(() => {
-    const pageTitle = kebabCaseToNormalText(pathname.substring(1));
-    return pageTitle ? pageTitle : "Home";
-  }, [pathname]);
+  const { pageTitle, animationState, pathname } = useDefault();
 
   return (
     <ConfigProvider theme={antdThemeConfig(true)}>

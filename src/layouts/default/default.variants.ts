@@ -2,19 +2,24 @@ import { Variants } from "framer-motion";
 
 export const pageInnerVariants: Variants = {
     hidden: {
-        opacity: 0
+        opacity: 0,
+        y: 15,
+        scaleX: 0.98
     },
     visible: {
         opacity: 1,
-        scale: 1,
+        y: 0,
+        scaleX: 1,
         transition: {
-            duration: 1,
-            delay: 5
+            duration: 0.3,
+            delay: 5,
+            ease: 'easeIn'
         },
 
     },
     exit: {
         opacity: 0,
-        scale: 0.9
+        y: 15,
+        scaleX: 0.98,
     }
 }
