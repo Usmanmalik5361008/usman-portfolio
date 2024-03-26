@@ -16,26 +16,26 @@ export default function Home() {
   return (
     <section className={`container ${classes["home-page-wrapper"]}`}>
       <Row gutter={gutter}>
-        <Col span={12}>
+        <Col xs={24} sm={12} md={12}>
           <IntroCard />
         </Col>
-        <Col span={12}>
+        <Col xs={24} sm={12} md={12}>
           <Row gutter={gutter} className="h-100">
-            <Col span={24}>
+            <Col xs={24} sm={24} md={24}>
               <TagLineCard />
             </Col>
-            <Col span={12}>
+            <Col xs={24} sm={12} md={12}>
               <ProjectCard />
             </Col>
-            <Col span={12}>
+            <Col xs={24} sm={12} md={12}>
               <ProfileCard />
             </Col>
           </Row>
         </Col>
-        <Col span={12}>
+        <Col xs={24} sm={24} md={12}>
           <NumbersCard />
         </Col>
-        <Col span={12}>
+        <Col xs={24} sm={24} md={12}>
           <WorkTogetherCard />
         </Col>
       </Row>

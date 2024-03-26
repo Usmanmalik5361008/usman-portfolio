@@ -10,6 +10,8 @@
         align-items: center;
         position: sticky;
         top: 0;
+        z-index: 999;
+
 
         .nav-links {
             display: inline-flex;
@@ -40,6 +42,8 @@
 
     @include themify($themes) {
         &>nav {
+            background-color: $dark-background-color;
+
             .nav-links {
                 &>a {
                     color: themed('subtle-text-color');
