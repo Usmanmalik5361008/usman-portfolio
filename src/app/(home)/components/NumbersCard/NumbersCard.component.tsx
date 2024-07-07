@@ -10,14 +10,14 @@ const { Text, Title } = Typography;
 const NumbersCard = () => {
   return (
     <div className={classes["numbers-card"]}>
-      <Number title={"Years Experience"} num={20} />
-      <Number title={"Total Clients"} num={30} />
-      <Number title={"Total Projects"} num={40} />
+      <Number title={"Years Experience"} num={"04"} />
+      <Number title={"Total Clients"} num={"15+"} />
+      <Number title={"Total Projects"} num={"20+"} />
     </div>
   );
 };
 
-const Number: React.FC<{ title: string; num: number }> = ({ title, num }) => (
+const Number: React.FC<{ title: string; num: string }> = ({ title, num }) => (
   <div className={classes["number"]}>
     <Title level={1} className="m-0">
       {num}

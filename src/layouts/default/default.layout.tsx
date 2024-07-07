@@ -1,6 +1,6 @@
 "use client";
 
-import { ConfigProvider } from "antd";
+import { ConfigProvider, notification } from "antd";
 import { AnimatePresence, motion } from "framer-motion";
 
 import { PageTransition } from "@/components";
@@ -10,11 +10,21 @@ import { Navbar } from "./components";
 import { pageInnerVariants } from "./default.variants";
 import useDefault from "./useDefault.hook";
 import "@/styles/main.scss";
+import { useEffect } from "react";
 
 const DefaultLayout: React.FC<{ children: React.ReactNode }> = ({
   children,
 }) => {
   const { pageTitle, animationState, pathname } = useDefault();
+
+  useEffect(() => {
+    notification.open({
+      message: "Alert",
+      description: "Website is still in progress",
+      duration: 0,
+      type: "warning",
+    });
+  }, []);
 
   return (
     <ConfigProvider theme={antdThemeConfig(true)}>
